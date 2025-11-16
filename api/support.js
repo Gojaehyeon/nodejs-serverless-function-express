@@ -1,5 +1,8 @@
-const ALLOWED_ORIGIN = 'https://heilocal.world';
-
+const allowedOrigins = [
+    'https://heilocal.world',
+    'http://localhost:3000',
+  ];
+  
 export default async function handler(req, res) {
   if (req.method === 'OPTIONS') {
     res.setHeader('Access-Control-Allow-Origin', ALLOWED_ORIGIN);
